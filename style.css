@@ -332,7 +332,37 @@ button:active {
     justify-content: space-between;
     gap: 8px;
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-normal), background-color var(--transition-normal);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-total:hover {
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 10px 24px -5px rgba(37, 99, 235, 0.22), 0 0 12px rgba(37, 99, 235, 0.12);
+}
+
+.kpi-efectivo:hover {
+    border-color: rgba(22, 163, 74, 0.4);
+    box-shadow: 0 10px 24px -5px rgba(22, 163, 74, 0.22), 0 0 12px rgba(22, 163, 74, 0.12);
+}
+
+.kpi-transferencia:hover {
+    border-color: rgba(234, 88, 12, 0.4);
+    box-shadow: 0 10px 24px -5px rgba(234, 88, 12, 0.22), 0 0 12px rgba(234, 88, 12, 0.12);
+}
+
+.kpi-articulos:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 10px 24px -5px rgba(168, 85, 247, 0.22), 0 0 12px rgba(168, 85, 247, 0.12);
+}
+
+.kpi-card:hover .kpi-icon {
+    transform: scale(1.08);
 }
 
 .kpi-icon {
@@ -345,6 +375,7 @@ button:active {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
 }
 
 .kpi-content h3 {
